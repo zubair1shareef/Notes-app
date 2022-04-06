@@ -1,0 +1,151 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(130, 147, 149, 0.312);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    .sub_container{
+        display: flex;
+        width: 90%;
+        height: 90%;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0 0 15px rgba(13, 14, 13, 0.298);
+        border-radius: 20px;
+        overflow: hidden;
+        .sidebar{
+            width: 4rem;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            border-right: 1.8px solid rgba(164, 164, 164, 0.368);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            button{
+                margin-top: 23px;
+                width: 50px;
+                height:50px;
+                color: white;
+                border-radius: 50px;
+                font-size: 30px;
+                background-color: black;
+            }
+            ul{
+                list-style: none;
+                padding-top:30px ;
+                li{
+                    margin-top: 20px;
+                    border-radius: 100%;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    background-color: black;
+                    &:hover{
+                        cursor: pointer;
+                box-shadow: 0 0 8px gray;
+                    }
+                }
+            }
+            
+        }
+        .card_container{
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            padding: 2rem;
+            flex-wrap: wrap;
+
+            
+            
+        }
+    }
+}
+
+.card{
+    width: 13%;
+    height: 27%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0 0 12px rgba(128, 128, 128, 0.326);
+    padding: 10px;
+    margin: 10px;
+    overflow-y: auto;
+    overflow: hidden;
+    h1{
+       
+        margin-left: 1rem;
+        border-bottom: 2px rgb(0, 0, 0);
+    }
+    h5{
+        margin-top: 10px;
+        font-size: 90%;
+        overflow-y: auto;
+
+    }
+}
+
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    background-color: rgba(248, 247, 247, 0.743);
+    box-shadow: 0 0 15px rgb(156, 153, 153);
+    border-radius: 20px;
+
+    input{
+        border: none;
+        outline: none;
+        box-shadow: 0 0 10px rgb(229, 229, 229);
+        width: 90%;
+        height: 30px;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    textarea{
+        border: none;
+        outline: none;
+        padding: 5px;
+
+        box-shadow: 0 0 10px rgb(229, 229, 229);
+        width: 90%;
+        border-radius: 10px;
+
+    }
+    .buttons{
+    display: flex;
+    button{
+        margin-left: 30px;
+        width: 90px;
+        height: 30px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        color:white;
+        background-color: rgb(79, 75, 75);
+        cursor: pointer;
+    }
+    h5{
+        text-align: center;
+       
+        margin-left: 30px;
+        width: 90px;
+        height: 30px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        color:rgb(0, 0, 0);
+        background-color: rgb(219, 219, 219);
+        cursor: pointer;
+
+    }
+    }
+}
