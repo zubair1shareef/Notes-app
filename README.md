@@ -1,5 +1,7 @@
 # Notes-app-MERN
 Notes app build using MERN stack ,with modern ui
+![screenshotimg](https://user-images.githubusercontent.com/66367807/162274768-1e5a50c3-c4d6-4d56-b5fc-3a69dd398b74.png)
+![popupimg](https://user-images.githubusercontent.com/66367807/162274780-c7bc5713-fdae-4ce8-81ae-20e9959eddf9.png)
 
 Installations
 Node
