@@ -6,13 +6,6 @@ import ShowPopup from './ShowPopup'
 
 
 
-
-
-
-
-
-
-
 function Main() {
   const [data, setdata] = useState([]);
   const [i, seti] = useState(0);
@@ -29,6 +22,7 @@ function Main() {
   const [colorOfCard, setcolorOfCard] = useState("#FEC971");
   const [list, setlist] = useState([]);
   const [edit, setedit] = useState([]);
+  const [editEnable, seteditEnable] = useState(false);
   
   
   return (
@@ -57,14 +51,14 @@ function Main() {
 
             {
               data.map((l)=>{
-              return <Card seti={seti} i={i} edit={edit} setedit={setedit} ShowPopup={ShowPopup} setpopVisible={setpopVisible} setdata={setdata} data={data} l={l}></Card>
+              return <Card seti={seti} i={i} edit={edit} editEnable={editEnable} seteditEnable={seteditEnable} setedit={setedit} ShowPopup={ShowPopup} setpopVisible={setpopVisible} setdata={setdata} data={data} l={l}></Card>
               })
             }
           </div>
 
       </div>
 
-      {popVisible? <ShowPopup seti={seti} i={i} edit={edit} setpopVisible ={setpopVisible} setlist={setlist} color={colorOfCard} />:""  }
+      {popVisible? <ShowPopup seti={seti} editEnable={editEnable} seteditEnable={seteditEnable} i={i} edit={edit} setpopVisible ={setpopVisible} setlist={setlist} color={colorOfCard} />:""  }
      
     
 

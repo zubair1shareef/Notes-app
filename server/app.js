@@ -5,12 +5,12 @@ const cors=require('cors')
 const app=express()
 const bodyParser = require('body-parser')
 
-const Student=require('./models/Students')
+const Student=require('./models/Notes')
 
 
 //db connection
 mongoose.Promise=global.Promise
-mongoose.connect('mongodb://localhost:27017/students')
+mongoose.connect('mongodb://localhost:27017/notes')
 mongoose.connection.on('connected',()=>{
     console.log('database is connnected')
 })
@@ -43,7 +43,7 @@ function getData(){
 getData()
 
 
-app.post('/students',(req,res)=>{
+app.post('/notes',(req,res)=>{
    
     //for sending to databse using models
     const student=new Student({
@@ -63,7 +63,7 @@ app.post('/students',(req,res)=>{
     })
  
 })
-app.delete('/students/:id',(req,res)=>{
+app.delete('/notes/:id',(req,res)=>{
     const id=req.params.id;
     Student.remove({_id:id},(err,result)=>{
         if(err){
@@ -77,12 +77,12 @@ app.delete('/students/:id',(req,res)=>{
 })
 
 //for updating
-app.put('/students/:id',(req,res)=>{
+app.put('/notes/:id',(req,res)=>{
     const title=req.body.title
     const desc=req.body.desc
     const color=req.body.color
     const id=req.params.id
-    Student.deleteOne({_id:id},{$set:{title:title,desc:desc,color:color}})
+    Student.update({_id:id},{$set:{title:title,desc:desc,color:color}})
     .then(result=>{
         res.status(200).json({msg:"updated sucessfully"})
     }).catch(err=>res.status(500).json({msg:"error in updating"}))

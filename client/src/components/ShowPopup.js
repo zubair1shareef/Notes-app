@@ -13,8 +13,8 @@ const ShowPopup = (props) => {
     const [desc, setdesc] = useState("")
   
    const  createTodo=(color)=>{
-       if(props.edit.id){
-        axios.put(`http://localhost:5000/students/${props.edit.id}`,{
+       if(props.editEnable==true){
+        axios.put(`http://localhost:5000/notes/${props.edit._id}`,{
             title:tile,
             desc:desc,
             color:color
@@ -22,10 +22,14 @@ const ShowPopup = (props) => {
             props.seti(props.i+1);
            
       
-          })
+          }).then(props.seteditEnable(false))
+        console.log(props.editEnable)
+        console.log(props.edit)
 
+        console.log("in edit models");
        }else{
-        axios.post('http://localhost:5000/students',{
+        //  console.log(props.editEnable)
+        axios.post('http://localhost:5000/notes',{
             title:tile,
             desc:desc,
             color:color

@@ -37,6 +37,7 @@
             ul{
                 list-style: none;
                 padding-top:30px ;
+                margin-right: 30px;
                 li{
                     margin-top: 20px;
                     border-radius: 100%;
@@ -76,6 +77,7 @@
     margin: 10px;
     overflow-y: auto;
     overflow: hidden;
+    position: relative;
     h1{
        
         margin-left: 1rem;
@@ -86,6 +88,35 @@
         font-size: 90%;
         overflow-y: auto;
 
+    }
+    .deletebtn{
+        background-color: rgba(169, 169, 169, 0);
+        border: none;
+        outline: none;
+        color:red;
+        font-size: 25px;
+        text-align: center;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+        position: absolute;
+        top:5px;
+        right: 5px;
+        cursor: pointer;
+    }
+    .editbtn{
+        
+        object-fit: cover;
+        border: none;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.453);
+        color: white;
+        position: absolute;
+        bottom:5px;
+        right: 5px;
+        cursor: pointer;
     }
 }
 
@@ -123,6 +154,7 @@
     .buttons{
     display: flex;
     button{
+        margin-top: 20PX;
         margin-left: 30px;
         width: 90px;
         height: 30px;

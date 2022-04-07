@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const studentsSchema=mongoose.Schema({
+const notesSchema=mongoose.Schema({
     _id:mongoose.Schema.Types.ObjectID,
     title:{
         type:String,
@@ -16,4 +16,4 @@ const studentsSchema=mongoose.Schema({
         required:true
     }
 });
-module.exports=mongoose.model('Student',studentsSchema)
+module.exports=mongoose.model('notes',notesSchema)
